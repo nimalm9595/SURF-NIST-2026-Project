@@ -1,0 +1,255 @@
+{
+    "source_model_file": "models/pytorch/pathmnist_cnn.py",
+    "framework": "PyTorch",
+    "model_name": "MedMNIST_CNN",
+    "data_set": "PathMNIST",
+    "input_channels": 3,
+    "num_classes": 9,
+    "model_type": "Net",
+    "layers": [
+        {
+            "layer_name": "layer1",
+            "layer_type": "Sequential",
+            "layer_details": "Sequential(\n  (0): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1))\n  (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)\n  (2): ReLU()\n)"
+        },
+        {
+            "layer_name": "layer1.0",
+            "layer_type": "Conv2d",
+            "layer_details": "Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1))",
+            "in_channels": 3,
+            "out_channels": 16,
+            "kernel_size": [
+                3,
+                3
+            ],
+            "stride": [
+                1,
+                1
+            ],
+            "padding": [
+                0,
+                0
+            ]
+        },
+        {
+            "layer_name": "layer1.1",
+            "layer_type": "BatchNorm2d",
+            "layer_details": "BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)",
+            "num_features": 16,
+            "eps": 1e-05,
+            "momentum": 0.1
+        },
+        {
+            "layer_name": "layer1.2",
+            "layer_type": "ReLU",
+            "layer_details": "ReLU()",
+            "activation_function": "ReLU"
+        },
+        {
+            "layer_name": "layer2",
+            "layer_type": "Sequential",
+            "layer_details": "Sequential(\n  (0): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1))\n  (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)\n  (2): ReLU()\n  (3): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n)"
+        },
+        {
+            "layer_name": "layer2.0",
+            "layer_type": "Conv2d",
+            "layer_details": "Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1))",
+            "in_channels": 16,
+            "out_channels": 16,
+            "kernel_size": [
+                3,
+                3
+            ],
+            "stride": [
+                1,
+                1
+            ],
+            "padding": [
+                0,
+                0
+            ]
+        },
+        {
+            "layer_name": "layer2.1",
+            "layer_type": "BatchNorm2d",
+            "layer_details": "BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)",
+            "num_features": 16,
+            "eps": 1e-05,
+            "momentum": 0.1
+        },
+        {
+            "layer_name": "layer2.2",
+            "layer_type": "ReLU",
+            "layer_details": "ReLU()",
+            "activation_function": "ReLU"
+        },
+        {
+            "layer_name": "layer2.3",
+            "layer_type": "MaxPool2d",
+            "layer_details": "MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)",
+            "kernel_size": 2,
+            "stride": 2,
+            "padding": 0
+        },
+        {
+            "layer_name": "layer3",
+            "layer_type": "Sequential",
+            "layer_details": "Sequential(\n  (0): Conv2d(16, 64, kernel_size=(3, 3), stride=(1, 1))\n  (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)\n  (2): ReLU()\n)"
+        },
+        {
+            "layer_name": "layer3.0",
+            "layer_type": "Conv2d",
+            "layer_details": "Conv2d(16, 64, kernel_size=(3, 3), stride=(1, 1))",
+            "in_channels": 16,
+            "out_channels": 64,
+            "kernel_size": [
+                3,
+                3
+            ],
+            "stride": [
+                1,
+                1
+            ],
+            "padding": [
+                0,
+                0
+            ]
+        },
+        {
+            "layer_name": "layer3.1",
+            "layer_type": "BatchNorm2d",
+            "layer_details": "BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)",
+            "num_features": 64,
+            "eps": 1e-05,
+            "momentum": 0.1
+        },
+        {
+            "layer_name": "layer3.2",
+            "layer_type": "ReLU",
+            "layer_details": "ReLU()",
+            "activation_function": "ReLU"
+        },
+        {
+            "layer_name": "layer4",
+            "layer_type": "Sequential",
+            "layer_details": "Sequential(\n  (0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))\n  (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)\n  (2): ReLU()\n)"
+        },
+        {
+            "layer_name": "layer4.0",
+            "layer_type": "Conv2d",
+            "layer_details": "Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))",
+            "in_channels": 64,
+            "out_channels": 64,
+            "kernel_size": [
+                3,
+                3
+            ],
+            "stride": [
+                1,
+                1
+            ],
+            "padding": [
+                0,
+                0
+            ]
+        },
+        {
+            "layer_name": "layer4.1",
+            "layer_type": "BatchNorm2d",
+            "layer_details": "BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)",
+            "num_features": 64,
+            "eps": 1e-05,
+            "momentum": 0.1
+        },
+        {
+            "layer_name": "layer4.2",
+            "layer_type": "ReLU",
+            "layer_details": "ReLU()",
+            "activation_function": "ReLU"
+        },
+        {
+            "layer_name": "layer5",
+            "layer_type": "Sequential",
+            "layer_details": "Sequential(\n  (0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n  (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)\n  (2): ReLU()\n  (3): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n)"
+        },
+        {
+            "layer_name": "layer5.0",
+            "layer_type": "Conv2d",
+            "layer_details": "Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))",
+            "in_channels": 64,
+            "out_channels": 64,
+            "kernel_size": [
+                3,
+                3
+            ],
+            "stride": [
+                1,
+                1
+            ],
+            "padding": [
+                1,
+                1
+            ]
+        },
+        {
+            "layer_name": "layer5.1",
+            "layer_type": "BatchNorm2d",
+            "layer_details": "BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)",
+            "num_features": 64,
+            "eps": 1e-05,
+            "momentum": 0.1
+        },
+        {
+            "layer_name": "layer5.2",
+            "layer_type": "ReLU",
+            "layer_details": "ReLU()",
+            "activation_function": "ReLU"
+        },
+        {
+            "layer_name": "layer5.3",
+            "layer_type": "MaxPool2d",
+            "layer_details": "MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)",
+            "kernel_size": 2,
+            "stride": 2,
+            "padding": 0
+        },
+        {
+            "layer_name": "fc",
+            "layer_type": "Sequential",
+            "layer_details": "Sequential(\n  (0): Linear(in_features=1024, out_features=128, bias=True)\n  (1): ReLU()\n  (2): Linear(in_features=128, out_features=128, bias=True)\n  (3): ReLU()\n  (4): Linear(in_features=128, out_features=9, bias=True)\n)"
+        },
+        {
+            "layer_name": "fc.0",
+            "layer_type": "Linear",
+            "layer_details": "Linear(in_features=1024, out_features=128, bias=True)",
+            "in_features": 1024,
+            "out_features": 128
+        },
+        {
+            "layer_name": "fc.1",
+            "layer_type": "ReLU",
+            "layer_details": "ReLU()",
+            "activation_function": "ReLU"
+        },
+        {
+            "layer_name": "fc.2",
+            "layer_type": "Linear",
+            "layer_details": "Linear(in_features=128, out_features=128, bias=True)",
+            "in_features": 128,
+            "out_features": 128
+        },
+        {
+            "layer_name": "fc.3",
+            "layer_type": "ReLU",
+            "layer_details": "ReLU()",
+            "activation_function": "ReLU"
+        },
+        {
+            "layer_name": "fc.4",
+            "layer_type": "Linear",
+            "layer_details": "Linear(in_features=128, out_features=9, bias=True)",
+            "in_features": 128,
+            "out_features": 9
+        }
+    ]
+}
